@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/79645/AndroidStudioProjects/Lesson6/app/src/main/res/layout/activity_edit_note.xml" value="0.17477203647416414" />
         <entry key="..\:/Users/79645/AndroidStudioProjects/Lesson6/app/src/main/res/layout/activity_main.xml" value="0.20425724637681159" />
+        <entry key="..\:/Users/79645/AndroidStudioProjects/Lesson6/app/src/main/res/layout/activity_new_note.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/79645/AndroidStudioProjects/Lesson6/app/src/main/res/layout/activity_notes_list.xml" value="0.33695652173913043" />
+        <entry key="..\:/Users/79645/AndroidStudioProjects/Lesson6/app/src/main/res/layout/note_item.xml" value="0.17477203647416414" />
+        <entry key="..\:/Users/79645/AndroidStudioProjects/Lesson6/app/src/main/res/layout/old_note_item.xml" value="0.17477203647416414" />
+        <entry key="..\:/Users/79645/AndroidStudioProjects/Lesson6/app/src/main/res/menu/main.xml" value="0.35384615384615387" />
       </map>
     </option>
   </component>
