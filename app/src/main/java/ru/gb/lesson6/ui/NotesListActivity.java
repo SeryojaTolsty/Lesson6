@@ -67,13 +67,6 @@ public class NotesListActivity extends AppCompatActivity implements NotesAdapter
         repository.create(new Note("Title 16", "Description 16"));
     }
 
-//    @Override
-//    public void onNoteClick(Note note) {
-//        Intent intent = new Intent(this, EditNoteActivity.class);
-//        intent.putExtra(Constants.NOTE, note);
-//        startActivity(intent);
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
@@ -98,5 +91,12 @@ public class NotesListActivity extends AppCompatActivity implements NotesAdapter
         Intent editIntent = new Intent(this, EditNoteActivity.class);
         editIntent.putExtra(NOTE_NEW, note);
         startActivity(editIntent);
+    }
+
+    @Override
+    public void onNoteClick(Note note) {
+        Intent intent = new Intent(this, EditNoteActivity.class);
+        intent.putExtra(Constants.NOTE, note);
+        startActivity(intent);
     }
 }
