@@ -1,4 +1,4 @@
-package ru.gb.lesson6.ui;
+package ru.gb.lesson6.user_interface;
 
 import androidx.appcompat.app.AppCompatActivity;
 

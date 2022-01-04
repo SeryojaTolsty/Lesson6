@@ -1,4 +1,4 @@
-package ru.gb.lesson6.ui;
+package ru.gb.lesson6.user_interface;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -42,13 +41,11 @@ public class NotesListActivity extends AppCompatActivity implements NotesAdapter
 
         rvList = findViewById(R.id.list);
 //        list.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));//для того, чтобы скроллить в стороны (редко применяется) - горизонтальная ориентация
-        rvList.setLayoutManager(new LinearLayoutManager(this));  //вертикальная ориентация
         rvList.setAdapter(adapter);
-
-
+        rvList.setLayoutManager(new LinearLayoutManager(this));  //вертикальная ориентация
     }
 
-    private void fillRepo() {
+    public void fillRepo() {
         repository.create(new Note("Title 1", "Description 1"));
         repository.create(new Note("Title 2", "Description 2"));
         repository.create(new Note("Title 3", "Description 3"));
@@ -65,6 +62,21 @@ public class NotesListActivity extends AppCompatActivity implements NotesAdapter
         repository.create(new Note("Title 14", "Description 14"));
         repository.create(new Note("Title 15", "Description 15"));
         repository.create(new Note("Title 16", "Description 16"));
+    }
+
+
+    @Override
+    public void onNoteClick(Note note) {
+        Intent intent = new Intent(this, EditNoteActivity.class);
+        intent.putExtra(Constants.NOTE, note);
+        startActivity(intent);
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.setNotes(repository.getAll());
     }
 
     @Override
@@ -91,12 +103,5 @@ public class NotesListActivity extends AppCompatActivity implements NotesAdapter
         Intent editIntent = new Intent(this, EditNoteActivity.class);
         editIntent.putExtra(NOTE_NEW, note);
         startActivity(editIntent);
-    }
-
-    @Override
-    public void onNoteClick(Note note) {
-        Intent intent = new Intent(this, EditNoteActivity.class);
-        intent.putExtra(Constants.NOTE, note);
-        startActivity(intent);
     }
 }

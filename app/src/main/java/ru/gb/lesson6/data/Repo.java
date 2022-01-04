@@ -1,6 +1,6 @@
 package ru.gb.lesson6.data;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface Repo {
 
@@ -16,5 +16,5 @@ public interface Repo {
     void update(Note note);
     void delete(int id);
 
-    List<Note> getAll();
+    ArrayList<Note> getAll();
 }

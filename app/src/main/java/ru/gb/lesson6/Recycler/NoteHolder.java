@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import ru.gb.lesson6.R;
 import ru.gb.lesson6.data.Note;
-import ru.gb.lesson6.ui.NotesListActivity;
 
 public class NoteHolder extends RecyclerView.ViewHolder {
 

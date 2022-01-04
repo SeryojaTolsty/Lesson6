@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lesson6">
         <activity
-            android:name=".ui.NewNoteActivity"
+            android:name=".user_interface.NewNoteActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".ui.NotesListActivity"
+            android:name=".user_interface.NotesListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.EditNoteActivity"
+            android:name=".user_interface.EditNoteActivity"
             android:exported="true"></activity>
     </application>
 
